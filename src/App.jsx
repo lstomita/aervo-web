@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 import './App.css'
 /* Import the image */
 import appScreen from './assets/app-screen.png'
@@ -31,7 +32,7 @@ function App() {
       <footer>
         <p className="copyright">© 2026 Aervo LLC. All rights reserved.</p>
         <div className="footer-links">
-          <a href="#">Privacy Policy</a>
+          <Link to="/privacy">Privacy Policy</Link>
           <span className="divider">|</span>
           <a href="#">Support</a>
         </div>
