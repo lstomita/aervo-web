@@ -1,37 +1,43 @@
-import React from 'react';
-import './App.css';
+import { useState } from 'react'
+import './App.css'
+/* Import the image */
+import appScreen from './assets/app-screen.png'
 
 function App() {
   return (
     <div className="container">
-      <main className="main-content">
-        <div className="logo-area">
-          {/* You can replace this text with your logo image later */}
-          <h1 className="app-name">Aervo</h1>
-          <p className="subtitle">The AI Travel Planner</p>
-        </div>
-
+      <div className="main-content">
+        <h1 className="app-name">Aervo</h1>
+        <p className="tagline">The AI Travel Planner</p>
+        
         <div className="card">
           <h2>Coming Soon to iOS</h2>
           <p>
-            We are building the future of travel planning. 
-            Craft detailed itineraries in seconds with the power of AI.
+            We are building the future of travel planning. Craft detailed 
+            itineraries in seconds with the power of AI.
           </p>
-          {/* Optional: Add an email signup form here later */}
-          <button className="cta-button" disabled>App Store Launching 2026</button>
+          <button className="cta-button">App Store Launching 2026</button>
         </div>
-      </main>
 
-      <footer className="footer">
-        <p>&copy; 2026 Aervo LLC. All rights reserved.</p>
-        <div className="links">
+        {/* NEW: The Phone Preview */}
+        <div className="phone-preview-container">
+          <div className="phone-frame">
+            <img src={appScreen} alt="Aervo App Interface" className="app-screen" />
+          </div>
+        </div>
+
+      </div>
+      
+      <footer>
+        <p className="copyright">© 2026 Aervo LLC. All rights reserved.</p>
+        <div className="footer-links">
           <a href="#">Privacy Policy</a>
-          <span className="separator">|</span>
+          <span className="divider">|</span>
           <a href="#">Support</a>
         </div>
       </footer>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
