@@ -1,0 +1,125 @@
+/* 1. IMPORT THE ANTA FONT */
+@import url('https://fonts.googleapis.com/css2?family=Anta&display=swap');
+
+/* Global Reset & Fonts */
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  text-align: center;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* Main Page Container */
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #0a0a0a; /* Deep black background */
+  color: #ffffff;
+}
+
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+/* LOGO & BRANDING */
+.app-name {
+  /* Using the Custom App Font */
+  font-family: 'Anta', sans-serif;
+  
+  /* FORCE THE ITALIC LOOK using skew */
+  transform: skewX(-10deg); 
+  display: inline-block; /* Required for transform to work nicely */
+  
+  font-size: 5rem;
+  margin-bottom: 0rem;
+  line-height: 1.1;
+  
+  /* The Indigo #4338ca Gradient */
+  background: linear-gradient(135deg, #4338ca, #6366f1);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  
+  /* Matching Indigo Glow */
+  filter: drop-shadow(0 0 30px rgba(67, 56, 202, 0.4));
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  color: #b0b0b0;
+  margin-top: 1rem;
+  margin-bottom: 4rem;
+  font-weight: 500;
+}
+
+/* CARD SURFACE */
+.card {
+  background: #1c1c1e;
+  padding: 3rem 2.5rem;
+  border-radius: 24px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+  max-width: 480px;
+  width: 100%;
+  border: 1px solid #2c2c2e;
+}
+
+.card h2 {
+    margin-top: 0;
+    font-weight: 700;
+}
+
+.card p {
+    color: #d1d1d1;
+    line-height: 1.6;
+}
+
+/* BUTTONS */
+.cta-button {
+  margin-top: 2rem;
+  padding: 1rem 2.5rem;
+  border-radius: 50px;
+  border: none;
+  
+  /* Solid Brand Color or subtle gradient */
+  background: #4338ca;
+  background: linear-gradient(135deg, #4338ca, #544FC5);
+  
+  color: white;
+  font-weight: 700;
+  font-size: 1.1rem;
+  cursor: default;
+  box-shadow: 0 4px 20px rgba(67, 56, 202, 0.4);
+}
+
+/* FOOTER */
+.footer {
+  padding: 3rem 2rem;
+  font-size: 0.9rem;
+  color: #6e6e73;
+}
+
+.links {
+    margin-top: 1rem;
+}
+
+.separator {
+    margin: 0 10px;
+    opacity: 0.3;
+}
+
+.links a {
+  color: #888;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.links a:hover {
+  color: #6366f1; /* Lighter indigo on hover */
+}
