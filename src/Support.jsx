@@ -41,7 +41,7 @@ function Support() {
           <div style={{ marginBottom: '1.5rem' }}>
             <strong>When is the iOS app launching?</strong>
             <p style={{ color: '#888', marginTop: '0.5rem' }}>
-              We are targeting a full release in 2026. Join the waitlist on our homepage to get notified.
+              We are working hard and targeting a full release in 2026. 
             </p>
           </div>
         </div>
