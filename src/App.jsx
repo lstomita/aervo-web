@@ -9,18 +9,21 @@ function App() {
     <div className="container">
       <div className="main-content">
         <h1 className="app-name">Aervo</h1>
-        <p className="tagline">The AI Travel Planner</p>
+        
+        {/* CHANGED: Broader focus, less AI-heavy */}
+        <p className="tagline">The Future of Travel Itineraries</p>
         
         <div className="card">
           <h2>Coming Soon to iOS</h2>
+          {/* CHANGED: Highlights specific features: Planning, Groups, & Scanning */}
           <p>
-            We are building the future of travel planning. Craft detailed 
-            itineraries in seconds with the power of AI.
+            The ultimate platform for collaborative travel. Plan detailed trips with friends, 
+            manage shared budgets, and instantly import bookings with our smart scanner.
           </p>
           <button className="cta-button">App Store Launching 2026</button>
         </div>
 
-        {/* NEW: The Phone Preview */}
+        {/* The Phone Preview */}
         <div className="phone-preview-container">
           <div className="phone-frame">
             <img src={appScreen} alt="Aervo App Interface" className="app-screen" />
@@ -34,7 +37,7 @@ function App() {
         <div className="footer-links">
           <Link to="/privacy">Privacy Policy</Link>
           <span className="divider">|</span>
-          <a href="#">Support</a>
+          <Link to="/support">Support</Link>
         </div>
       </footer>
     </div>
