@@ -199,10 +199,12 @@ const styles = {
     padding: '3rem',
     border: '1px solid rgba(255,255,255,0.05)',
     boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.5)', // Premium shadow
+    textAlign: 'left', // Ensures the card content is left
   },
   prose: {
     lineHeight: '1.75',
     color: '#d4d4d8',
+    textAlign: 'left', // <--- ADD THIS (Double safety for text)
   },
   sectionTitle: {
     fontSize: '1.5rem',
