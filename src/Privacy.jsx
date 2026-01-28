@@ -44,11 +44,17 @@ function Privacy() {
                 <li style={styles.listItem}><strong>Notifications:</strong> We may send you push notifications to remind you of upcoming itinerary events or flight times. You can enable or disable these permissions in your device settings.</li>
                 <li style={styles.listItem}><strong>Usage & Interaction Data:</strong> We track your interactions with the App, including search queries, features used, and interactions with the community (such as "cloning" or "viewing" public trips).</li>
               </ul>
+              
+              {/* CHANGE #1: Information We Do NOT Collect */}
+              <p style={{ marginTop: '1rem' }}>
+                <strong>Information We Do Not Collect:</strong> We do not collect sensitive personal data such as government-issued identification numbers, biometric data, or precise real-time location tracking unless explicitly enabled for specific features.
+              </p>
             </Section>
 
+            {/* CHANGE #2: Location Wording Update */}
             <Section title="3. Location Information">
               To provide features like "Nearby Gems," travel suggestions, and <strong>interactive itinerary mapping</strong>, we may request access to your 
-              device's geolocation. You can enable or disable this access at any time through your device settings. 
+              device's geolocation <strong>while the App is in use</strong>. You can enable or disable this access at any time through your device settings. 
             </Section>
 
             <Section title="4. Community and Collaboration">
@@ -85,9 +91,15 @@ function Privacy() {
             <Section title="9. Deletion of Data">
               You have the right to request the deletion of your account and all associated data. 
               You can perform this action directly within the App's settings menu or by contacting us.
+              We retain personal data only as long as necessary to provide the Service or comply with legal obligations.
             </Section>
 
-            <Section title="10. Contact Us">
+            {/* CHANGE #3: Children's Privacy Section */}
+            <Section title="10. Children's Privacy">
+              Aervo is not intended for use by children under the age of 13. We do not knowingly collect personal information from children. If you believe a child has provided us with personal data, please contact us and we will delete it.
+            </Section>
+
+            <Section title="11. Contact Us">
               If you have any questions about this Privacy Policy, please contact us at: <br/>
               <a href="mailto:support@aervo.co" style={{...styles.link, fontSize: '1.1rem'}}>support@aervo.co</a>
             </Section>
