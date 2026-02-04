@@ -1,0 +1,12 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.lane.aervo",
+      "sha256_cert_fingerprints": [
+        "4B:4E:F4:C5:A2:0F:FA:59:5F:3E:15:CF:10:13:68:DC:3C:B4:7B:BF:25:E9:5B:88:A7:E0:F8:4A:96:45:48:C8"
+      ]
+    }
+  }
+]

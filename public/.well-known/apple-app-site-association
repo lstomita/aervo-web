@@ -1,0 +1,11 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appID": "P9799K7SG8.com.lane.aervo",
+        "paths": [ "/p/*", "/trips/*" ]
+      }
+    ]
+  }
+}
