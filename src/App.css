@@ -12,6 +12,8 @@
   margin: 0 auto;
   text-align: center;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  background-color: #000000 !important;
+  color-scheme: dark only !important;
 }
 
 /* Main Page Container */
@@ -116,6 +118,29 @@
   padding: 3rem 2rem;
   font-size: 0.9rem;
   color: #6e6e73;
+}
+
+:root {
+  color-scheme: dark only !important; /* Force ONLY dark mode UI */
+  background-color: #000000 !important;
+}
+
+html, body {
+  background-color: #000000 !important;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100%; /* Changed from height: 100% to allow bleeding */
+  -webkit-tap-highlight-color: transparent;
+  -webkit-overflow-scrolling: touch;
+}
+
+#root {
+  background-color: #000000 !important;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
 }
 
 .links {

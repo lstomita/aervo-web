@@ -3,14 +3,27 @@
   line-height: 1.5;
   font-weight: 400;
 
-  color-scheme: light dark;
+  /* [FIX] Zero transparency and absolute dark-mode signaling */
+  color-scheme: dark only !important;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  background-color: #000000 !important;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+/* [NEW] THE MAGIC TRICK: Prevents Safari from sampling the bright hero image */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: env(safe-area-inset-top); 
+  background: #000000;
+  z-index: 9999;
 }
 
 a {
@@ -22,13 +35,30 @@ a:hover {
   color: #535bf2;
 }
 
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+:root {
+  background-color: #000000 !important;
+  color-scheme: dark only !important;
 }
+
+html, body {
+  background-color: #000000 !important;
+  margin: 0;
+  padding: 0;
+  /* [FIX] Strict 100% height helps Chrome color its bottom navigation bar black */
+  height: 100%; 
+  width: 100%;
+  overflow: hidden; 
+}
+
+#root {
+  height: 100%;
+  width: 100%;
+  background-color: #000000;
+  /* Ensure this container doesn't scroll; p/[id].tsx internal ScrollView does the work */
+  overflow: hidden; 
+}
+
+/* ... keep your remaining link and button styles below ... */
 
 h1 {
   font-size: 3.2em;
@@ -54,15 +84,30 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+/* --- SAFARI-ONLY SURGICAL FIXES --- */
+
+/* 1. Remove the white haze at the bottom in Safari */
+.is-safari html {
+  background-color: #000000 !important;
+}
+
+/* If detection works, this MUST be red */
+/* SURGICAL TEST - Place this at the very bottom of index.css */
+.is-safari body::before {
+  content: "TESTING RED BAR" !important;
+  color: white !important;
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100px !important;
+  background-color: red !important;
+  z-index: 99999 !important;
+  display: block !important;
+}
+
+/* 3. Optional: Extra grounding for Safari Private Mode */
+.is-safari body {
+  background-color: #000000 !important;
+  overscroll-behavior-y: none; /* Prevents white flash on scroll bounce */
 }
