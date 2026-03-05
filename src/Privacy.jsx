@@ -21,7 +21,7 @@ function PrivacyPolicy() {
         {/* 2. HEADER SECTION */}
         <div style={styles.headerSection}>
           <h1 style={styles.pageTitle}>Privacy Policy</h1>
-          <p style={styles.lastUpdated}>Last Updated: February 2, 2026</p>
+          <p style={styles.lastUpdated}>Last Updated: March 4, 2026</p>
           <div style={styles.gradientLine}></div>
         </div>
 
@@ -41,13 +41,13 @@ function PrivacyPolicy() {
                 <li style={styles.listItem}><strong>Subscription & Transaction Data:</strong> We store data regarding your subscription status (e.g., "Free" or "Pro") and transaction identifiers to manage your access to premium features. We do <strong>not</strong> store your raw credit card information, which is processed securely by Apple or Google.</li>
                 <li style={styles.listItem}><strong>Travel Inputs & Drafts:</strong> We store the itinerary details and saved places ("Bucket List" items) you manually input (such as locations, dates, and times). This includes Draft Trips, which are saved to our secure cloud servers to allow you to resume planning across devices.</li>
                 <li style={styles.listItem}><strong>Notifications:</strong> We may send you push notifications to remind you of upcoming itinerary events or flight times. You can enable or disable these permissions in your device settings.</li>
-                <li style={styles.listItem}><strong>Usage & Interaction Data:</strong> We track your interactions with the App, including search queries, features used, and interactions with the community (such as "cloning" or "viewing" public trips). We may use analytics and crash-reporting tools (such as Firebase Analytics or Crashlytics) to understand app performance and improve reliability. These tools may collect device identifiers and pseudonymous usage information.</li>
+                <li style={styles.listItem}><strong>Usage & Interaction Data:</strong> We track interactions with the App, including specific search queries (stored in your private search history to enable faster caching), features used, and interactions with the community. We use analytics tools to understand performance and improve reliability. These tools may collect device identifiers and pseudonymous usage information.</li>
                 <li style={styles.listItem}><strong>Information We Do Not Collect:</strong> We do not collect sensitive personal data such as government-issued identification numbers, biometric data, or precise real-time location tracking unless explicitly enabled for specific features. Location access is used only while the App is in use (when granted); we do not track location in the background.</li>
               </ul>
             </Section>
 
             <Section title="3. Location Information">
-              <p>To provide features like "Nearby Gems," travel suggestions, and interactive itinerary mapping, we may request access to your device's geolocation while the App is in use. You can enable or disable this access at any time through your device settings.</p>
+              <p>To provide features, travel suggestions, and interactive itinerary mapping, we may request access to your device's geolocation. When you save locations to your itinerary or bucket list, we store the associated coordinates to provide mapping services and localized travel suggestions.</p>
             </Section>
 
             <Section title="4. Community and Collaboration">
@@ -72,7 +72,7 @@ function PrivacyPolicy() {
             </Section>
 
             <Section title="7. Google Maps Integration">
-              <p>Our application uses the Google Maps API(s) to display interactive maps and location data. By using these features, you agree to be bound by <a href="https://policies.google.com/terms" target="_blank" rel="noreferrer" style={styles.link}>Google’s Terms of Service</a> and <a href="https://policies.google.com/privacy" target="_blank" rel="noreferrer" style={styles.link}>Google’s Privacy Policy</a>.</p>
+              <p>Our application uses the Google Maps API(s) to display interactive maps, location data, location search, and geocoding services. By using these features, you agree to be bound by <a href="https://policies.google.com/terms" target="_blank" rel="noreferrer" style={styles.link}>Google’s Terms of Service</a> and <a href="https://policies.google.com/privacy" target="_blank" rel="noreferrer" style={styles.link}>Google’s Privacy Policy</a>.</p>
             </Section>
 
             <Section title="8. Data Security">

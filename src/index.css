@@ -15,6 +15,7 @@
 }
 
 /* [NEW] THE MAGIC TRICK: Prevents Safari from sampling the bright hero image */
+/* Reverted to original height to only cover the safe area inset */
 body::before {
   content: "";
   position: fixed;
@@ -47,7 +48,7 @@ html, body {
   /* [FIX] Strict 100% height helps Chrome color its bottom navigation bar black */
   height: 100%; 
   width: 100%;
-  overflow: hidden; 
+  overflow-y: auto;
 }
 
 #root {
@@ -55,10 +56,14 @@ html, body {
   width: 100%;
   background-color: #000000;
   /* Ensure this container doesn't scroll; p/[id].tsx internal ScrollView does the work */
-  overflow: hidden; 
+  overflow-y: auto;
 }
 
-/* ... keep your remaining link and button styles below ... */
+/* [NEW] Specialized Lock: Only lock the screen if we are on a 'Public Trip' page */
+/* You will need to add this class to the top-level div in p/[id].tsx */
+.is-public-trip, .is-public-trip body {
+  overflow: hidden !important;
+}
 
 h1 {
   font-size: 3.2em;
@@ -91,20 +96,7 @@ button:focus-visible {
   background-color: #000000 !important;
 }
 
-/* If detection works, this MUST be red */
-/* SURGICAL TEST - Place this at the very bottom of index.css */
-.is-safari body::before {
-  content: "TESTING RED BAR" !important;
-  color: white !important;
-  position: fixed !important;
-  top: 0 !important;
-  left: 0 !important;
-  width: 100% !important;
-  height: 100px !important;
-  background-color: red !important;
-  z-index: 99999 !important;
-  display: block !important;
-}
+/* [REMOVED] TESTING RED BAR block deleted to restore production appearance */
 
 /* 3. Optional: Extra grounding for Safari Private Mode */
 .is-safari body {

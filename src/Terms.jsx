@@ -21,7 +21,7 @@ function Terms() {
         {/* 2. HEADER SECTION */}
         <div style={styles.headerSection}>
           <h1 style={styles.pageTitle}>Terms of Service</h1>
-          <p style={styles.lastUpdated}>Last Updated: February 2, 2026</p>
+          <p style={styles.lastUpdated}>Last Updated: March 4, 2026</p>
           <div style={styles.gradientLine}></div>
         </div>
 
@@ -48,10 +48,11 @@ function Terms() {
             </Section>
 
             <Section title="4. Navigation and Location Data">
-              The "Go" and "Navigate" features in Aervo utilize third-party services (such as Google Maps and Apple Maps) to provide directions.
+              The "Go" and "Navigate" and "Add from Maps/Discovery" features in Aervo utilize third-party services (such as Google Maps and Apple Maps) to provide directions.
               <ul style={styles.list}>
                 <li style={styles.listItem}><strong>No Warranty of Accuracy:</strong> We provide destination coordinates to these third-party apps for your convenience. We do not control the routing, safety, or accuracy of the navigation provided by Google or Apple.</li>
                 <li style={styles.listItem}><strong>Safety Warning:</strong> You acknowledge that map data may differ from actual real-world conditions (e.g., road closures, construction, or unsafe areas). You agree to exercise judgment and prioritize personal safety. <strong>Aervo LLC is not liable for any injury, loss, or damage occurring while traveling to a location found or stored within the App.</strong></li>
+                <li style={styles.listItem}><strong>Discovery Content:</strong> We provide location suggestions and the ability to "Add from Maps" based on third-party data. We do not guarantee that suggested locations are open, safe, or accurate.</li>
               </ul>
             </Section>
 
@@ -87,6 +88,7 @@ function Terms() {
                 <li style={styles.listItem}><strong>App Store Payments:</strong> All subscriptions (e.g., Aervo Pro) are processed directly by the Apple App Store or Google Play Store. We do not store or process your credit card information.</li>
                 <li style={styles.listItem}><strong>Cancellations:</strong> To cancel a subscription, you must do so through your device's settings (Apple ID or Google Play Account). Uninstalling the app does not cancel your subscription.</li>
                 <li style={styles.listItem}><strong>Refunds:</strong> Refund requests must be directed to Apple or Google, as we do not have the ability to process refunds for transactions made through their stores.</li>
+                <li style={styles.listItem}><strong>Feature Limits:</strong> We reserve the right to implement and adjust usage limits on specific features (including AI Image Scans and Discovery tools) for both Free and Pro tiers to ensure service stability and manage operational costs.</li>
               </ul>
             </Section>
 
