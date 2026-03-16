@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//c/dev/**)",
+      "Bash(git -C /c/dev/aervo-app ls-files \"Aervo API Keys.txt\" 2>/dev/null)"
+    ]
+  }
+}
